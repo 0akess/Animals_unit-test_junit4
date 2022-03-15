@@ -1,8 +1,8 @@
-import com.example.Cat;
 import com.example.Feline;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -28,6 +28,7 @@ public class FelineParameterizedTest {
                 {10, 10},
         };
     }
+
     @Test()
     public void getKittensNumberOfKittensGetNumberOfKittens() {
         Feline feline = new Feline();
