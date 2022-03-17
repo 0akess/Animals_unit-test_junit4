@@ -1,7 +1,6 @@
 import com.example.Animal;
-import org.junit.Rule;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,17 +15,18 @@ public class AnimalTest {
         assertEquals(expected, actual);
     }
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
     @Test()
-    public void getFoodInvalidStringGetException() throws Exception {
+    public void getFoodInvalidStringGetException(){
         final String expected = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         final String checkedText = "всеядное";
 
-        thrown.expect(Exception.class);
-        thrown.expectMessage(expected);
-
         Animal animal = new Animal();
-        String.valueOf(animal.getFood(checkedText));
+
+        try {
+            animal.getFood(checkedText);
+            Assert.fail("Исключение не отработало");
+        } catch (Exception thrown){
+            assertEquals(expected, thrown.getMessage());
+        }
     }
 }

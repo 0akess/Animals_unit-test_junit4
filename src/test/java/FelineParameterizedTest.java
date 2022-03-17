@@ -5,10 +5,8 @@ import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.assertEquals;
 
-
 @RunWith(Parameterized.class)
 public class FelineParameterizedTest {
-
     private final int checkedText;
     private final int expected;
 
