@@ -10,8 +10,8 @@ public class FelineParameterizedTest {
     private final int sumKittens;
     private final int expected;
 
-    public FelineParameterizedTest(int checkedText, int expected) {
-        this.sumKittens = checkedText;
+    public FelineParameterizedTest(int sumKittens, int expected) {
+        this.sumKittens = sumKittens;
         this.expected = expected;
     }
 
