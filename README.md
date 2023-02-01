@@ -1,1 +1,2 @@
-# unit test Mockito
+# Инструменты:
+Mockito, JUnit 4
